@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Login</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-warning bg-gradient ">
+  <div id="wellcomePage">
+    <h1 id="wellcome" class="text-center">"Selamat datang"</h1>
+    <h5 class="text-center">Terima Kasih "<b id="nama" class="text-center"></b>" sudah berkunjung
+    </h5>
+    <button type="button" class="btn btn-danger d-flex position-absolute  start-50 translate-middle-x " id="logoutBtn" onclick="logoutBtn()">Logout</button>
+  </div>
+  <!-- login -->
+  <div id="loginPage">
+    <h1>Silahkan login</h1>
+    <div>
+      <div class="row mb-3">
+        <label for="inputUsernameL" class="col-sm-2 col-form-label m-1">Username</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputUsernameL">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPasswordL" class="col-sm-2 col-form- m-1">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPasswordL">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="onLogin()">Sign in</button>
+    </div>
+    <div class="m-3 ">
+      <P class="text-danger m-2" id="loginError">Username atau Password salah!</P>
+      <p>bulum punya akun? <span onclick="register()" type="submit" class="text-primary  ">Register disini!</span> </p>
+
+    </div>
+  </div>
+  <!-- register -->
+  <div id="registerPage">
+    <h1>Silahkan daftar</h1>
+
+    <div class="row">
+      <label for="role" class="col-sm-2 col-form-label m-1"></label>
+      <div class="col-sm-10">
+        <select class="form-select" aria-label="Default select example" id="role">
+          <option selected>Pilih role</option>
+          <option value="admin">Admin</option>
+          <option value="user">User</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <div class="row mb-3">
+        <label for="inputUsernameR" class="col-sm-2 col-form-label m-1">Username</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputUsernameR">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPasswordR" class="col-sm-2 col-form- m-1">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPasswordR">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="onRegister()">Sign up</button>
+    </div>
+    <div class="m-3">
+      <p class="text-danger m-3 " id="registerError"> Tidak boleh ada yang kosong!</p>
+      <p>
+        <span id="registered">Pendaftaran berhasil</span>
+        <span id="ques">sudah punya akun?</span>
+        <span onclick="login()" type="submit" class="text-primary">login disini!</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script type="application/JavaScript" src="logic.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+body {
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#registerPage {
+    display: none;
+}
+
+#loginError {
+    display: none;
+}
+
+#registered {
+    display: none;
+}
+
+#registerError {
+    display: none;
+
+}
+
+#wellcomePage {
+    display: none;
+}
+
+/* #logoutBtn {
+
+} */
